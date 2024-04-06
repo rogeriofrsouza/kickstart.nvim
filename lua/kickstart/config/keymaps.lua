@@ -33,4 +33,13 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- vim: ts=2 sts=2 sw=2 et
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode with jk' })
+
+-- Window management
+vim.keymap.set('n', '<leader>|', '<C-w>v', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>-', '<C-w>s', { desc = 'Split window horizontally' })
+
+vim.keymap.set('n', '<leader><Tab><Tab>', '<cmd>tabnew<CR>', { desc = 'Open new tab' })
+vim.keymap.set('n', '<leader><Tab>d', '<cmd>tabclose<CR>', { desc = 'Close current tab' })
+vim.keymap.set('n', '<leader><Tab>]', '<cmd>tabn<CR>', { desc = 'Go to next tab' })
+vim.keymap.set('n', '<leader><Tab>[', '<cmd>tabp<CR>', { desc = 'Go to previous tab' })
