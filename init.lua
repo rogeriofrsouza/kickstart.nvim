@@ -1,13 +1,33 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+require 'kickstart.launch'
+require 'kickstart.options'
+require 'kickstart.keymaps'
+require 'kickstart.autocmds'
 
--- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = true
+spec 'kickstart.breadcrumbs'
+spec 'kickstart.bufferline'
+spec 'kickstart.cmp'
+spec 'kickstart.colorscheme'
+spec 'kickstart.comment'
+spec 'kickstart.dashboard'
+spec 'kickstart.debug'
+spec 'kickstart.dressing'
+spec 'kickstart.formatting'
+spec 'kickstart.gitsigns'
+spec 'kickstart.indent-blankline'
+spec 'kickstart.lazygit'
+spec 'kickstart.linting'
+spec 'kickstart.lspconfig'
+spec 'kickstart.mini'
+spec 'kickstart.neo-tree'
+spec 'kickstart.nvim-jdtls'
+spec 'kickstart.persistence'
+spec 'kickstart.plenary'
+spec 'kickstart.telescope'
+spec 'kickstart.telescope-file-browser'
+spec 'kickstart.todo-comments'
+spec 'kickstart.treesitter'
+spec 'kickstart.vim-sleuth'
+spec 'kickstart.vim-tmux-navigator'
+spec 'kickstart.which-key'
 
-require 'kickstart.config'
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+require 'kickstart.lazy'

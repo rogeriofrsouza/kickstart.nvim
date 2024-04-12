@@ -58,3 +58,4 @@ vim.opt.scrolloff = 10
 vim.cmd 'let g:netrw_liststyle = 3'
 
 vim.opt.termguicolors = true
+vim.opt.wrap = false

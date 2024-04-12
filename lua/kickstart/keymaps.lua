@@ -1,5 +1,13 @@
--- See `:help vim.keymap.set()`
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
+-- Set to true if you have a Nerd Font installed
+vim.g.have_nerd_font = true
+
+-- See `:help vim.keymap.set()`
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -43,3 +51,7 @@ vim.keymap.set('n', '<leader><tab><tab>', '<cmd>tabnew<CR>', { desc = 'Open new 
 vim.keymap.set('n', '<leader><tab>d', '<cmd>tabclose<CR>', { desc = 'Close current tab' })
 vim.keymap.set('n', '<leader><tab>]', '<cmd>tabn<CR>', { desc = 'Go to next tab' })
 vim.keymap.set('n', '<leader><tab>[', '<cmd>tabp<CR>', { desc = 'Go to previous tab' })
+
+-- Stay in indent mode
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent left' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent right' })
