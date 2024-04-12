@@ -36,6 +36,7 @@ return {
       --  Check out: https://github.com/echasnovski/mini.nvim
 
       require('mini.pairs').setup()
+      require('mini.bufremove').setup()
     end,
   },
 }

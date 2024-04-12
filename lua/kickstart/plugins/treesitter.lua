@@ -16,6 +16,7 @@ return {
         'javascript',
         'typescript',
         'java',
+        'xml',
         'dockerfile',
         'yaml',
       },

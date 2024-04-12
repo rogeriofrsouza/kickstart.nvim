@@ -12,7 +12,7 @@ return {
       {
         '<leader>fe',
         function()
-          require('neo-tree.command').execute { toggle = true, dir = vim.fn.stdpath 'config' }
+          require('neo-tree.command').execute { toggle = true }
         end,
         desc = 'Explorer NeoTree (Root Dir)',
       },
@@ -38,6 +38,11 @@ return {
           require('neo-tree.command').execute { source = 'buffers', toggle = true }
         end,
         desc = 'Buffer Explorer',
+      },
+    },
+    opts = {
+      filesystem = {
+        group_empty_dirs = true,
       },
     },
   },

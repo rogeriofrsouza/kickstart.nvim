@@ -159,6 +159,7 @@ return {
         'prettierd',
         'eslint_d',
         'hadolint',
+        'java-test',
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
